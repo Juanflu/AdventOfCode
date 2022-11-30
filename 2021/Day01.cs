@@ -24,14 +24,14 @@
         {
             var depths = this.data.Split("\n").Select(int.Parse).ToArray();
 
-            return depths.Skip(1).Select((depth, increment) => depth > depths[increment]).Count(depth => depth);
+            return depths.Skip(1).Select((depth, index) => depth > depths[index]).Count(depth => depth);
         }
 
         private int PartTwo()
         {
             var depths = this.data.Split("\n").Select(int.Parse).ToArray();
 
-            return depths.Skip(3).Select((depth, increment) => depth > depths[increment]).Count(depth => depth);
+            return depths.Skip(3).Select((depth, index) => depth > depths[index]).Count(depth => depth);
         }
 
         internal void Solve()
